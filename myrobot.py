@@ -1,5 +1,6 @@
 from Raspi_MotorHAT import Raspi_MotorHAT, Raspi_DCMotor
 import time
+import tkinter as tk 
 
 mh = Raspi_MotorHAT(addr=0x6F)
 
@@ -32,19 +33,16 @@ def stop():
     leftRear.run(Raspi_MotorHAT.RELEASE)
     rightRear.run(Raspi_MotorHAT.RELEASE)
 
-i = 0
 
-while(i < 16):
-    forward()
-    time.sleep(.5)
-    i += 1
-stop()
+master = tk.Tk()
+
+def callback():
+    print("click!")
+
+a = tk.Button(master,text="forword",command=callback)
+a.pack()
+
+master.mainloop()
 
 
-x = 0 
-while(x < 16):
-    reverse()
-    time.sleep(.5)
-    x += 1
-stop()
 
