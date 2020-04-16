@@ -41,14 +41,5 @@ while(i < 10):
 
 stop()
 
-x = 0
-
-while(x < 13):
-    reverse()
-    time.sleep(.5)
-    i += 1 
-
-stop()
-
 
 
