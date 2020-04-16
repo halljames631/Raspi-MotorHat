@@ -34,7 +34,7 @@ def stop():
 
 i = 0
 
-while(i < 10):
+while(i < 16):
     forward()
     time.sleep(.5)
     i += 1
