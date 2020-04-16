@@ -7,3 +7,6 @@ rightFront = mh.getMotor(2)
 
 leftFront.setSpeed(200)
 rightFront.setSpeed(200)
+
+leftFront.run(Raspi_MotorHAT.FORWARD)
+rightFront.run(Raspi_MotorHAT.FORWARD)
