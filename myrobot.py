@@ -46,5 +46,5 @@ while(x < 10):
     reverse()
     time.sleep(.5)
     x += 1
-
+stop()
 
