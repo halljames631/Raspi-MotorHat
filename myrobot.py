@@ -20,6 +20,12 @@ def forward():
     leftRear.run(Raspi_MotorHAT.FORWARD)
     rightRear.run(Raspi_MotorHAT.FORWARD)
 
+def reverse():
+    leftFront.run(Raspi_MotorHAT.BACKWARD)
+    rightFront.run(Raspi_MotorHAT.BACKWARD)
+    leftRear.run(Raspi_MotorHAT.BACKWARD)
+    rightRear.run(Raspi_MotorHAT.BACKWARD)
+
 def stop():
     leftFront.run(Raspi_MotorHAT.RELEASE)
     rightFront.run(Raspi_MotorHAT.RELEASE)
@@ -32,6 +38,15 @@ while(i < 10):
     forward()
     time.sleep(.5)
     i += 1
+
+stop()
+
+x = 0
+
+while(x < 13):
+    reverse()
+    time.sleep(.5)
+    i += 1 
 
 stop()
 
