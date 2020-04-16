@@ -38,8 +38,13 @@ while(i < 10):
     forward()
     time.sleep(.5)
     i += 1
-
 stop()
 
+
+x = 0 
+while(x < 10):
+    reverse()
+    time.sleep(.5)
+    x += 1
 
 
