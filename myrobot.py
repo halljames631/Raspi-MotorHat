@@ -1,6 +1,6 @@
 from Raspi_MotorHAT import Raspi_MotorHAT, Raspi_DCMotor
 import time
-import tkinter as tk 
+import Tkinter as tk 
 
 mh = Raspi_MotorHAT(addr=0x6F)
 
@@ -20,6 +20,17 @@ def forward():
     rightFront.run(Raspi_MotorHAT.FORWARD)
     leftRear.run(Raspi_MotorHAT.FORWARD)
     rightRear.run(Raspi_MotorHAT.FORWARD)
+    
+
+def right():
+    leftFront.run(Raspi_MotorHAT.FORWARD)
+    leftRear.run(Raspi_MotorHAT.FORWARD)
+    
+def left():
+    rightFront.run(Raspi_MotorHAT.FORWARD)
+    rightRear.run(Raspi_MotorHAT.FORWARD)
+       
+    
 
 def reverse():
     leftFront.run(Raspi_MotorHAT.BACKWARD)
@@ -36,11 +47,17 @@ def stop():
 
 master = tk.Tk()
 
-def callback():
-    print("click!")
 
-a = tk.Button(master,text="forword",command=callback)
+a = tk.Button(master,text="forword",command=forward)
 a.pack()
+b = tk.Button(master,text="backup",command=reverse)
+b.pack()
+c = tk.Button(master,text="stop",command=stop)
+c.pack()
+d = tk.Button(master,text="right",command=right)
+d.pack()
+d = tk.Button(master,text="left",command=left)
+d.pack()
 
 master.mainloop()
 
